@@ -1,0 +1,307 @@
+/*Importing Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/*Setting up universal content for the html & body*/
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-family: 'pt sans', sans-serif;
+}
+
+/*Changing Scrollbar width*/
+*{
+    scrollbar-width: thin;
+}
+
+/*Hiding the Image*/
+header > a {
+    margin: 0px;
+    padding: 0px;
+    display: none;
+}
+
+/*NAVBAR*/
+nav {
+    background-color: #1c1c1c;;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    top:0;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Adding the text on the left of the navbar*/
+nav::before {
+    content: "Heart of Kentucky Kids";
+    font-size: 20px;
+    font-family: 'pt sans', serif;
+    color: #f9f9f9;
+    display: block;
+    margin-left: 20px;
+}
+
+/*Setting up the left part of the navbar */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin-right: 5px;
+    gap: 10px;
+    font-size: 18.6667px;
+    font-family: 'pt sans', serif;
+}
+
+/*Adding padding to make buttons bigger*/
+nav ul li a{
+    padding: 10px;
+}
+
+/*Keeping the white color*/
+nav ul a:link, nav ul a:visited {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+/*Title Box*/
+header {
+    height:340px;
+    background-image:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url("imgs/HeartofKYWebLogo.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+/*Title Image*/
+.title {
+    font-family: 'Rock Salt', cursive;
+    color: #f9f9f9;
+    margin:20px;
+    padding:100px;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    text-align: center;
+    font-size: 400%;
+    font-weight: 400;
+    z-index:9;
+}
+
+/*FOLLOW US SECTION*/
+aside {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    margin-top: 20px;
+}
+
+/*Text*/
+aside::before {
+    content: "Follow us!";
+    font-family: 'Rock Salt', arial;
+    font-size: 48px;
+    text-align: center;
+    color: #1c1c1c;
+    display: block;
+    flex-basis: 100%;
+}
+
+/*Images*/
+a [alt="Facebook"] {
+    background-color:#0070e8;
+    border-radius:500px;
+    margin:10px;
+    width:44px;
+    height:44px;  
+}
+
+a [alt="Instagram"] {
+    background-color: #ff0050;
+    margin:10px;
+    border-radius:500px;
+    width:44px;
+    height:44px;
+}
+
+/*MAIN BODY*/
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/*Inspo Text*/
+#inspiration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    text-wrap: normal;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/*SECTIONS*/
+section {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 8px;
+    font-size: 18.6667px;
+}
+
+section * {
+    padding: 14px 8px;
+    margin: 0px;
+    font-size: 18.6667px;
+}
+
+section a{
+    padding: 0px;
+    font-size: 18.6667px;
+    color: #007299;
+}
+
+/*Headings*/
+h2 {
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+/*Section 1: Mission*/
+#mission p:last-child {
+    font-family: 'Roboto Slab';
+    color: #007299;
+    font-weight: 500;
+    text-align:center;
+}
+
+#mission p:last-child a:link, #mission p:last-child a:visited {
+    font-family: 'Roboto Slab';
+}
+
+/*Section 3: Funding*/
+#funding p {
+    font-weight: bold;
+}
+
+#funding h2+p {
+    font-weight: normal;
+}
+
+address+p {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+address {
+    font-style:normal;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#allDonation, #dollyDonation {
+    font-weight:lighter;
+    padding-bottom: 0px;
+}
+
+#dollyDonation {
+    padding-top: 28px;
+}
+
+/*Childcare*/
+
+/*Removing Follow Us*/
+#childcare aside{
+    display: none;
+}
+
+#childcare main a:link, #childcare main a:visited {
+    color: #007299;
+}
+
+.imgwrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.imgwrapper > * {
+    padding: 24px 0px;
+}
+
+/*Why Childcare*/
+#whyChildcare {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Removing Long Image*/
+#whyChildcare .imgdiv {
+    display: none;
+}
+
+/*Choose Childcare*/
+#choseChildcare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+#chooseChildcare .imgdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+#chooseChildcare img {
+    height: 280px;
+}
+
+#chooseChildcare > div:nth-child(2) {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+
+/*Childcare Benefits*/
+#childcareBenefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Responsive Text*/
+@media (max-width:850px) {
+    .title {
+        font-size: 250%;
+    }
+
+    .main {
+        gap: 10px;
+    }
+}

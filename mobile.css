@@ -54,6 +54,7 @@ nav::after {
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    opacity: 90%;
 }
 
 /* Hiding Menu by Default */
@@ -98,7 +99,7 @@ nav:hover ul {
 
 /* Hamburger Icon Animation */
 nav:hover::after {
-    transform: rotate(135deg);
+    transform: rotate(225deg);
     opacity: 25%;
 }
 
@@ -109,19 +110,20 @@ nav:hover::before {
 
 /* Title Box */
 header {
-    height: 340px;
+    height: 75vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("imgs/HeartofKYWebLogo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Title Image */
 .title {
     font-family: 'PT Sans', sans-serif;
     color: #f9f9f9;
-    margin: 20px;
-    padding: 100px;
     display: flex;
     align-content: center;
     justify-content: center;

@@ -1,0 +1,725 @@
+/*Importing Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/*Setting up universal content for the html & body*/
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-family: 'pt sans', sans-serif;
+    text-align: center;
+}
+
+/*Changing Scrollbar width*/
+*{
+    scrollbar-width: thin;
+}
+
+/*Hiding the Image*/
+header > a {
+    margin: 0px;
+    padding: 0px;
+    display: none;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #1c1c1c;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+/* Left Text */
+nav::before {
+    content: "Heart of KY Kids";
+    color: #f9f9f9;
+    font-size: 4rem;
+    font-family: 'Raleway';
+    display: inline-block;
+}
+
+/* Hamburger Icon */
+nav::after {
+    content: '';
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f9f9f9;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 90%;
+}
+
+/* Hiding Menu by Default */
+nav ul {
+    display: none;
+    position: absolute;
+    height: 30vh;
+    top: 7vh;
+    right: 0;
+    background-color: #1c1c1c;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+/* Menu Items */
+nav ul li {
+    width: 100%;
+    height: 5vh;
+    border-top: 1px solid #555; /* Light grey border */
+    border-bottom: 1px solid #555;
+}
+
+nav ul li a {
+    height: 100%;
+    color: #f9f9f9;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2vh;
+}
+
+/* Show the menu */
+nav:hover ul {
+    display: flex;
+}
+
+/* Hamburger Icon Animation */
+nav:hover::after {
+    transform: rotate(225deg);
+    opacity: 25%;
+}
+
+/* Hide the left text when active */
+nav:hover::before {
+    content: "";
+}
+
+/* Title Box */
+header {
+    margin-top: 7vh;
+    height: 20vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("imgs/123.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title Image */
+.title {
+    font-family: 'Rock Salt', sans-serif;
+    color: #f9f9f9;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 400;
+    z-index: 9;
+}
+
+/*FOLLOW US SECTION*/
+aside {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    margin-top: 20px;
+}
+
+/*Text*/
+aside::before {
+    content: "Follow us!";
+    font-family: 'Rock Salt', arial;
+    font-size: 48px;
+    text-align: center;
+    color: #1c1c1c;
+    display: block;
+    flex-basis: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+
+section {
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding: 20px 8px;
+}
+
+section * {
+    padding: 14px 8px;
+    margin: 0px;
+}
+
+h2 {
+    color: #007299;
+    font-size: 3.5vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+a:link, a:visited {
+    color: #007299;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 0;
+}
+
+ul li a:link, ul li a:visited {
+    color: #f9f9f9;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.imgwrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4vh;
+    text-align: center;
+}
+
+/*Image group short*/
+.imggroup.short {
+    width: 90%;
+    height: auto;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 13px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imggroup.short:hover {
+    transform: scale(1.07);
+    box-shadow: 0 30px 18px -8px rgba(0, 0, 0, 0.1);
+}
+
+.imggroup.short .imgdiv {
+    position: relative;
+    width: 100%;
+    flex: 0 0 auto; 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+}
+
+.imggroup.short .imgdiv img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.imggroup.short .imgdiv::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.4s ease-out;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    z-index: 1;
+}
+
+.imggroup.short:hover .imgdiv::after {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.imggroup.short > div:nth-of-type(2) {
+    position: relative;
+    z-index: 2;
+    background-color: #fff; 
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.imggroup.short:hover > div:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.imggroup.short > div:nth-of-type(2) p,
+.imggroup.short > div:nth-of-type(2) .links,
+.imggroup.short > div:nth-of-type(2) li {
+    font-size: 2.1rem;
+    margin: 8px 0;
+}
+
+.imggroup.short > div:nth-of-type(2) a {
+    color: #f9f9f9;
+    font-size: 2.1rem;
+    padding: 0;
+    text-decoration: none;
+}
+
+.imggroup.short > div:nth-of-type(2) a:hover {
+    color: #005a99;
+}
+
+.imggroup.short ul li {
+    background-color: #007299;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+/*Image group long*/
+.imggroup.long {
+    width: 90%;
+    height: auto;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 13px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imggroup.long:hover {
+    transform: scale(1.07);
+    box-shadow: 30px 30px 18px -8px rgba(0, 0, 0, 0.1);
+}
+
+.imggroup.long .imgdiv {
+    position: relative;
+    width: 100%;
+    flex: 0 0 auto; 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+}
+
+.imggroup.long .imgdiv img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.imggroup.long .imgdiv::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.4s ease-out;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    z-index: 1;
+}
+
+.imggroup.long:hover .imgdiv::after {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.imggroup.long > div:nth-of-type(2) {
+    position: relative;
+    z-index: 2;
+    background-color: #fff; 
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.imggroup.long:hover > div:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.imggroup.long > div:nth-of-type(2) p,
+.imggroup.long > div:nth-of-type(2) .links,
+.imggroup.long > div:nth-of-type(2) li {
+    font-size: 2.1rem;
+    margin: 8px 0;
+}
+
+.imggroup.long > div:nth-of-type(2) a {
+    color: #f9f9f9;
+    font-size: 2.1rem;
+    padding: 0;
+    text-decoration: none;
+}
+
+.imggroup.long > div:nth-of-type(2) a:hover {
+    color: #005a99;
+}
+
+.imggroup.long ul li {
+    background-color: #007299;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+/*Home*/
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
+#home header {
+    height: 60vh;
+}
+
+#home .title {
+    height: 65vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    top: -80px;
+    font-weight: 400;
+    font-size: 400%;
+    margin:20px;
+    padding:100px;
+    
+}
+
+a [alt="Facebook"] {
+    background-color:#0070e8;
+    border-radius:500px;
+    margin:10px;
+    width:4vh;
+    height:4vh;  
+}
+
+a [alt="Instagram"] {
+    background-color: #ff0050;
+    margin:10px;
+    border-radius:500px;
+    width:4vh;
+    height:4vh;
+}
+
+#funding{
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Warm gradient for depth */
+    color: #333; /* Neutral text color */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#home #funding h2::before {
+    background-image:url("imgs/234.jpg");
+    display:block;
+    object-fit: contain;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 20vh;
+    content:"";
+}
+
+/*FOLLOW US SECTION*/
+aside {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 5vh;
+    order:2;
+}
+#home #mission{
+    order: 2;
+}
+
+#home #members{
+    order: 4;
+}
+
+#inspiration{
+    order: 0;
+}
+
+#funding{
+    order: 6;
+}
+
+#funding h2{
+    text-align: center;
+    font-size: 8vw;
+}
+
+/*Text*/
+aside::before {
+    content: "Follow us!";
+    font-family: 'Rock Salt', arial;
+    font-size: 80px;
+    text-align: center;
+    color: #1c1c1c;
+    display: block;
+    flex-basis: 100%;
+}
+
+
+#inspiration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    text-wrap: normal;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+#home main{
+    gap: 0;
+}
+
+#mission h2 {
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+#members h2 {
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+#mission p:last-child {
+    font-family: 'Roboto Slab';
+    color: #007299;
+    font-weight: 500;
+    text-align:center;
+    font-size: 21.6667px;
+}
+
+#mission p {
+    font-size: 18.6667px;
+}
+
+#mission{
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 20px 8px;
+    font-size: 18.6667px;
+    max-width: 1500px;
+}
+
+#members p{
+    font-size: 18.6667px;
+}
+
+#members{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 8px;
+    font-size: 18.6667px;
+    max-width: 1500px;
+
+}
+
+#home header {
+    margin-top: 0;
+}
+
+#mission a{
+    padding: 0;
+}
+
+#funding{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#funding p{
+    font-weight: normal;
+    font-size: 18.6667px;
+}
+
+/*Childcare*/
+
+/*Removing Follow Us*/
+#childcare aside {
+    display: none;
+}
+
+#childcare main {
+    margin-top: 5vh;
+}
+
+#childcare .imgwrapper ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#childcare .imgwrapper li {
+    padding: 0;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#childcare .imgwrapper a {
+    font-size: 2.8rem;
+}
+
+/*Acitivities*/
+
+/*Removing Follow Us*/
+#activities aside {
+    display: none;
+}
+
+#programs h2 {
+    margin-bottom: 4vh;
+}
+
+#programs .imgwrapper {
+    gap: 4vh;
+    height: 100%;
+}
+
+#programs .video {
+    width: 100%;
+}
+
+#programs iframe {
+    width: 100%;
+}
+
+#programs .note {
+    margin-top: 4vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #007299;
+    text-align: center;
+}
+
+/*Support*/
+
+/*Removing Follow Us*/
+#support aside {
+    display: none;
+}
+
+/*Preschool*/
+
+/*Removing Follow Us*/
+#preschool aside {
+    display: none;
+}
+
+#preschool .phone {
+    background-color: #007299;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+#PublicPreschool > p {
+    font-size: 0.9vh;
+}
+
+/*Concerns*/
+
+/*Removing Follow Us*/
+#concerns aside {
+    display: none;
+}
+
+#concerns main section:first-of-type p {
+    text-align: justify;
+}
+
+#concerns main section:first-of-type ul {
+    list-style: square;
+}
+
+#concerns main section:first-of-type ul li {
+    display: static;
+    color: #1c1c1c;
+    text-align: justify;
+    margin-left: 7%;
+}
+
+#concerns #age03 .phone a:link, #concerns #age03 .phone a:visited {
+    color: #007299;
+}
+
+#concerns #age36 .phone {
+    background-color: #007299;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    margin-left: 16px;
+    margin-right: 16px;
+}

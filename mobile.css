@@ -60,6 +60,7 @@ nav::after {
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin-right: 20px;
     opacity: 90%;
 }
 
@@ -117,8 +118,8 @@ nav:hover::before {
 /* Title Box */
 header {
     margin-top: 7vh;
-    height: 14vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("imgs/HeartofKYWebLogo.jpg");
+    height: 20vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("imgs/123.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -129,8 +130,11 @@ header {
 
 /* Title Image */
 .title {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Rock Salt', sans-serif;
     color: #f9f9f9;
+
+   
+
     display: flex;
     align-content: center;
     justify-content: center;
@@ -409,6 +413,206 @@ ul li a:link, ul li a:visited {
     border-radius: 7px;
 }
 
+/*Home*/
+
+#home header {
+    height: 70vh;
+    top: 0;
+}
+
+a [alt="Facebook"] {
+    background-color:#0070e8;
+    border-radius:500px;
+    margin:10px;
+    margin-bottom: 50px;
+    width:6.5vh;
+    height:6.5vh;  
+}
+
+a [alt="Instagram"] {
+    background-color: #ff0050;
+    margin:10px;
+    margin-bottom: 50px;
+    border-radius:500px;
+    width:6.5vh;
+    height:6.5vh;
+}
+
+#funding{
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Warm gradient for depth */
+    color: #333; /* Neutral text color */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#home #funding h2::before {
+    background-image:url("imgs/234.jpg");
+    display:block;
+    object-fit: contain;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 20vh;
+    content:"";
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#home .title {
+    height: 65vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    top: -80px;
+    font-weight: 400;
+    font-size: 400%;
+    margin:20px;
+    padding:100px;
+}
+
+nav::before {
+    font-family: 'Rock Salt';
+    font-size: 2em;
+}
+
+
+
+/*FOLLOW US SECTION*/
+aside {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    margin-top: 20px;
+    order:2;
+}
+#home #mission{
+    order: 2;
+}
+
+#home #members{
+    order: 4;
+}
+
+
+#inspiration{
+    order: 0;
+}
+
+#funding{
+    order: 6;
+}
+
+#funding h2{
+    text-align: center;
+    font-size: 8vw;
+}
+
+/*Text*/
+aside::before {
+    content: "Follow us!";
+    font-family: 'Rock Salt', arial;
+    font-size: 80px;
+    text-align: center;
+    color: #1c1c1c;
+    display: block;
+    flex-basis: 100%;
+}
+
+
+#inspiration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    text-wrap: normal;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+#home main{
+    gap: 0;
+}
+
+#mission h2 {
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+#members h2 {
+    color: #007299;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+#mission p:last-child {
+    font-family: 'Roboto Slab';
+    color: #007299;
+    font-weight: 500;
+    text-align:center;
+    font-size: 21.6667px;
+}
+
+#mission p {
+    font-size: 18.6667px;
+}
+
+#mission{
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 20px 8px;
+    font-size: 18.6667px;
+    max-width: 1500px;
+}
+
+#members p{
+    font-size: 18.6667px;
+}
+
+#members{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 8px;
+    font-size: 18.6667px;
+    max-width: 1500px;
+}
+
+#home header {
+    margin-top: 0;
+}
+
+#mission a{
+    padding: 0;
+}
+
+#funding{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#funding p{
+    font-weight: normal;
+    font-size: 18.6667px;
+}
+
 /*Childcare*/
 
 /*Removing Follow Us*/
@@ -534,3 +738,4 @@ ul li a:link, ul li a:visited {
     margin-left: 16px;
     margin-right: 16px;
 }
+

@@ -89,6 +89,10 @@ nav ul li {
     border-bottom: 1px solid #555;
 }
 
+nav ul li:last-of-type {
+    border-bottom: 1px solid transparent;
+}
+
 nav ul li a {
     height: 100%;
     color: #f9f9f9;
